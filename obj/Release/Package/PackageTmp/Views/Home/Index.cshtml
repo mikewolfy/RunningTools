@@ -1,0 +1,36 @@
+﻿<div ng-app="runningToolsApp">
+    <div ng-controller="runsCtrl" class="container">
+
+        <h4>Total miles this week: {{miles}}</h4>
+
+        <div class="row">
+            <div class="col-md-8">
+                <div ng-repeat="run in runs | orderBy:date" class="list-group">
+                    <a href="#" class="list-group-item">
+                        <h4 class="list-group-item-heading">Date: {{run.date}}, {{run.distance}} miles</h4>
+                        <span class="list-group-item-text">Type: {{run.type}},    Shoes: {{run.shoes}}</span>
+                    </a>
+                </div>
+            </div>
+
+            <div class="col-md-8">
+                <div ng-repeat="shoe in shoes" class="list-group">
+                    <a href="#" class="list-group-item">
+                        <h4 class="list-group-item-heading">{{shoe.shoeId}}: {{shoe.name}}</h4>
+                        <span class="list-group-item-text">Purchase Date: {{shoe.purchaseDate}}, Description: {{shoe.description}}</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="row">
+            <button type="button" class="btn btn-primary btn-lg">Add a Run</button>
+        </div>
+
+        <script src="~/Scripts/angular.min.js"></script>
+        <script src="~/Scripts/angular-route.js"></script>
+        <script src="~/app/app.js"></script>
+        <script src="~/app/services.js"></script>
+        <script src="~/app/controllers.js"></script>
+    </div>
+</div>
