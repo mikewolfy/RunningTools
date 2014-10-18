@@ -3,12 +3,14 @@
 runningToolsApp.controller('runsCtrl',
     function runsCtrl($scope, runService) {
 
-        //$scope.miles = 25;
-        $scope.miles =  runService.miles();
+        $scope.miles = 25;
+        //$scope.miles =  runService.miles();
 
-        $scope.runs = runService.runs();
+        //$scope.runs = runService.runs();
 
-        $scope.shoes = runService.shoes().content;
+        //$scope.shoes = runService.shoes().content;
+
+        //$scope.runs = runService.get();
 
         //$scope.runs = [
         //    {

@@ -1,5 +1,4 @@
 ﻿
-
 runningToolsApp.service('runService', function ($http, $q) {
         
     var shoeList = { content: null };
